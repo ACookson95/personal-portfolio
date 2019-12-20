@@ -1,0 +1,30 @@
+.topbar {
+  background-color: #000000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: solid #499EBF 2px;  
+}
+
+.topbar .name a {
+  color: #F2EBEE;
+  font-size: 36px;
+  text-decoration: none;
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.topbar .links a {
+  color: #499EBF;
+  font-size: 20px;
+  text-decoration: none;
+  padding: 15px;
+  line-height: 50px; 
+  border-left: #499EBF solid 1px;
+}
+
+.topbar .links a:hover {
+  color: #F2EBEE;
+}
+
+

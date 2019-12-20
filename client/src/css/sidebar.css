@@ -1,0 +1,22 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
+  padding: 5px 20px;
+  background-color: #000000;
+  border-right: solid #499EBF 2px;
+}
+
+.sidebar a {
+  text-decoration: none;
+  color: #F2EBEE;
+  text-align: center;
+  font-size: large;
+  padding: 30px;
+  border-bottom: solid #F2EBEE 1px;
+
+}
+
+.sidebar a:hover {
+  background-color: rgba(0, 0, 0, -0.25);;
+}
