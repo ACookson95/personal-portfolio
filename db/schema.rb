@@ -10,10 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_20_070309) do
+ActiveRecord::Schema.define(version: 2019_12_31_012014) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "blogs", force: :cascade do |t|
+    t.string "title"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "form_responses", force: :cascade do |t|
     t.string "name"
@@ -25,11 +31,14 @@ ActiveRecord::Schema.define(version: 2019_12_20_070309) do
 
   create_table "posts", force: :cascade do |t|
     t.string "title"
+    t.string "img_link"
     t.string "author"
-    t.string "img"
     t.text "body"
+    t.bigint "blog_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["blog_id"], name: "index_posts_on_blog_id"
   end
 
+  add_foreign_key "posts", "blogs"
 end

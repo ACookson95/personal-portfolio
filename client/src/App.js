@@ -14,7 +14,7 @@ import { Container } from 'semantic-ui-react';
 
 
 const App = () => (
-  <>
+  <div className="main-container">
     <Topbar />
       <div className="wrapper">
         <Sidebar />
@@ -30,6 +30,6 @@ const App = () => (
           </Switch>
         </div>
       </div>
-  </>
+  </div>
 )
 export default App;

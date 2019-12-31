@@ -2,12 +2,14 @@
 
 one:
   title: MyString
+  img_link: MyString
   author: MyString
-  img: MyString
   body: MyText
+  blog: one
 
 two:
   title: MyString
+  img_link: MyString
   author: MyString
-  img: MyString
   body: MyText
+  blog: two

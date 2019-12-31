@@ -1,10 +1,14 @@
 .sidebar {
   display: flex;
   flex-direction: column;
-  justify-content:space-between;
-  padding: 5px 20px;
-  background-color: #000000;
-  border-right: solid #499EBF 2px;
+  justify-content:space-evenly;
+  padding: 0 25px;
+  background: rgb(30,30,30);
+  background: linear-gradient(0deg, rgba(30,30,30,1) 0%, rgba(30,30,30,1) 95%, rgba(45,96,116,1) 100%);  display: flex;
+  overflow: visible;
+  height: 100%;
+  box-shadow: 5px 0 10px rgb(30,30,30);
+  z-index: 1;
 }
 
 .sidebar a {
@@ -12,11 +16,18 @@
   color: #F2EBEE;
   text-align: center;
   font-size: large;
-  padding: 30px;
+  padding: 30px 100px;
   border-bottom: solid #F2EBEE 1px;
-
 }
 
 .sidebar a:hover {
   background-color: rgba(0, 0, 0, -0.25);;
+}
+
+.expand-menu {
+  height: 50px;
+  width: 50px;
+  cursor: pointer;
+  margin: 100px -25px;
+  z-index: 1;
 }
