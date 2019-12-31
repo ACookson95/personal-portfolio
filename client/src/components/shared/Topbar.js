@@ -15,8 +15,8 @@ const Topbar = () => (
     <Link to="/">Aaron Cookson</Link>
   </div>
 
-  <div class="link-wrapper">
-    <div class="social">
+  <div className="link-wrapper">
+    <div className="social">
       <a href="https://www.facebook.com/Cookson.Aaron" target="_blank"><img src={facebook}/></a>
       <a href="https://www.twitter.com/aaroncookson?lang=en" target="_blank"><img src={twitter}/></a>
       <a href="https://www.instagram.com/aaron_cookson/" target="_blank"><img src={instagram}/></a>

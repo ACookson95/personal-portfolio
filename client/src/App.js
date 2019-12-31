@@ -10,8 +10,8 @@ import Projects from './components/pages/Projects';
 import Skills from './components/pages/Skills';
 import Hobbies from './components/pages/Hobbies';
 import Blog from './components/pages/Blog';
-import { Container } from 'semantic-ui-react';
-
+import BlogPage from './components/pages/BlogPage';
+import NoMatch from './components/shared/NoMatch'
 
 const App = () => (
   <div className="main-container">
@@ -27,6 +27,8 @@ const App = () => (
             <Route to exact path='/Skills' component={Skills}/>
             <Route to exact path='/Hobbies' component={Hobbies}/>
             <Route to exact path='/Blog' component={Blog}/>
+            <Route to exact path='/Blog/:id' component={BlogPage}/>
+            <Route component={NoMatch} />
           </Switch>
         </div>
       </div>

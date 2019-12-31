@@ -1,17 +1,40 @@
-import React from 'react';
+import React, {Component} from 'react';
+import axios from 'axios';
+import { Redirect, Link } from 'react-router-dom'
+import BlogNav from './BlogNav'
 
-const Blog = () => (
-  <div>
-      <h1>Blog Page</h1>
-      
-      <p>
-        Create a series of cards that each contain a cover image, author, and a body to it. Create a modul
-        for the blog post to pop out to view the entire article. Only show a portion of the article on the 
-        card.
-      </p>
-      <p>An Example:</p>
-      <img src="https://begindot.com/wp-content/uploads/2018/03/blogmag-800x480.jpg"/>
-    </div>
-)
+class Blog extends Component {
 
+  state = { blogs: [] }
+
+  componentDidMount() {
+    axios.get('/api/blogs')
+      .then( res => {
+        this.setState({ blogs: res.data })
+      })
+      .catch( err => {
+        console.log(err)
+      })
+  } 
+
+  
+
+  render() {
+    return(
+      <div>
+        <div>
+          <h1>Blogs</h1>
+          <h1>+</h1>
+        </div>
+      {this.state.blogs.map( b =>
+        <BlogNav 
+        key={b.id}
+        {...b}
+        />
+        )}
+      </div>
+    )
+  }
+
+}
 export default Blog;
