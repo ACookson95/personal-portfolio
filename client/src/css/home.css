@@ -2,7 +2,7 @@
   background-image: url('../img/home-background.png');
   background-size: cover;
   height: 100%;
-  width: 110%;
+  width: calc(100% + 100px);
   margin-left: -50px;
   display: flex;
   flex-direction: column;
