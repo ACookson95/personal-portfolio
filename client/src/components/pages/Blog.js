@@ -1,37 +1,43 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Redirect, Link } from 'react-router-dom'
-import BlogNav from './BlogNav'
+import { Redirect } from 'react-router-dom'
 
 class Blog extends Component {
 
-  state = { blogs: [] }
+  state = { 
+    blogs: [],
+    firstBlog: {},
+    firstBlogID: ''
+  }
 
   componentDidMount() {
     axios.get('/api/blogs')
       .then( res => {
-        this.setState({ blogs: res.data })
+        this.setState({ blogs: res.data})
+        this.firstBlog()
       })
       .catch( err => {
         console.log(err)
       })
   } 
 
+  firstBlog = () => {
+    this.setState({
+      firstBlog: this.state.blogs[0],
+      firstBlogID: this.state.blogs[0].id
+    })
+  }
+
   
 
   render() {
     return(
       <div>
-        <div>
-          <h1>Blogs</h1>
-          <h1>+</h1>
-        </div>
-      {this.state.blogs.map( b =>
-        <BlogNav 
-        key={b.id}
-        {...b}
-        />
-        )}
+        <Redirect to={{
+          pathname: `/Blog/${this.state.firstBlogID}`,
+          state: {...this.state.firstBlog}
+        }} 
+        key={this.state.firstBlogID}/>
       </div>
     )
   }

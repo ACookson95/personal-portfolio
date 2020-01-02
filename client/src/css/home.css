@@ -1,0 +1,31 @@
+.container {
+  background-image: url('../img/home-background.png');
+  background-size: cover;
+  height: 100%;
+  width: 110%;
+  margin-left: -50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.container .title, .container .description{
+  background-color: rgba(30,30,30,0.7);
+  padding: 40px 70px;
+  color: #F2EBEE;
+}
+
+.title {
+  font-size: 80px;
+  border-bottom-left-radius: 5px;
+}
+
+.description {
+  font-size: 20px;
+  word-wrap: break-word;
+  width: 300px;
+  line-height: 1.5;
+  border-bottom-left-radius: 5px;
+}
+

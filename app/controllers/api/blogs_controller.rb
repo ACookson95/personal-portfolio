@@ -23,14 +23,14 @@ class Api::BlogsController < ApplicationController
   end
 
   def destroy
-    @blog.find(params[:id]).destroy
+    Blog.find(params[:id]).destroy
     render json: {message: "Blog Deleted"}
   end
 
   private
 
   def blog_params
-    params.require(:blog).permit(:title)
+    params.require(:blog).permit( :id, :title )
   end
 
 end

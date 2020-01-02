@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import '../../css/sidebar.css'
-import MenuExpand from '../../img/menu-closed-button.svg'
+// import MenuExpand from '../../img/menu-closed-button.svg'
 
 const Sidebar = () => (
 <>
@@ -12,7 +12,7 @@ const Sidebar = () => (
   <Link to="/Skills">Skills</Link>
   <Link to="/Projects">Projects</Link>
 </div>
-<img src={MenuExpand} className="expand-menu"></img>
+{/* <img src={MenuExpand} className="expand-menu"></img> */}
 </>
 )
 
